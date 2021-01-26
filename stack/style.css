@@ -12,16 +12,21 @@ body {
 .container {
   background-color: whitesmoke;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .box {
   background-color: teal;
-  width: 100px;
-  height: 100px;
   border: 2px solid #212121;
 }
 
-.stack * + * {
+.sidebar {
+  border: 1px solid black;
+  flex-basis: 20rem;
+  flex-grow: 1;
+}
+
+.sidebar > * + * {
   margin-top: 10px;
 }
 
@@ -29,4 +34,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-grow: 999;
+  flex-shrink: 1;
+  flex-basis: 0;
+  min-width: 50%;
 }
