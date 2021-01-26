@@ -1,0 +1,32 @@
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.container {
+  background-color: whitesmoke;
+  display: flex;
+}
+
+.box {
+  background-color: teal;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #212121;
+}
+
+.stack * + * {
+  margin-top: 10px;
+}
+
+.main_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
