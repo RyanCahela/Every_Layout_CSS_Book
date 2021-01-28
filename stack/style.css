@@ -22,20 +22,33 @@ body {
 
 .sidebar {
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   flex-basis: 20rem;
   flex-grow: 1;
 }
 
-.sidebar > * + * {
-  margin-top: 10px;
+.sidebar > *:nth-child(4) {
+  margin-bottom: auto;
+}
+
+.stack > * + * {
+  margin-top: 1.5rem;
 }
 
 .main_content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-sizing: content-box;
+  max-width: 60ch;
+  height: 66.6vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.not_sidebar {
   flex-grow: 999;
   flex-shrink: 1;
-  flex-basis: 0;
   min-width: 50%;
 }

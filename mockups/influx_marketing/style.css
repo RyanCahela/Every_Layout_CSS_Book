@@ -1,0 +1,97 @@
+:root {
+  /*
+  COLORS
+  */
+  --promo-color: #a03d3c;
+  --darkGrey: #c3c3c3;
+  --white: #ffffff;
+
+  /*
+  SIZES
+  */
+  --copy-line-height: 1.5rem;
+  --treatments-padding: 1.5rem;
+  --treatments-gap: 1.5rem;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: linear-gradient(var(--darkGrey), var(--white));
+  box-sizing: border-box;
+}
+
+.medspa-promo {
+  background-color: var(--promo-color);
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.medspa-promo a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.treatments {
+  padding-left: var(--treatments-padding);
+  padding-right: var(--treatments-padding);
+  max-width: 120ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.treatments h1 {
+  text-align: center;
+}
+
+.treatments-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+.treatments-list div {
+  /*as a flex parent*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  /*as a flex child*/
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  min-width: 50ch;
+}
+
+.treatments-list li {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50%;
+  min-width: 20ch;
+}
+
+.treatments-list img {
+  width: 100%;
+}
+
+.treatments-list h2 {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: var(--white);
+}
+
+.treatments-ad-copy {
+  text-align: center;
+  line-height: var(--copy-line-height);
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+}
